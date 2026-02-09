@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: auto;
+    overflow-x: hidden;
+}
+
+.container{
+    flex: 1;
+    padding-bottom: 1rem;
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    height: 5rem;
+    background-color:white;
+}
+
+.navbar-brand{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+.collapse{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    color: #fe424fa1;
+    text-decoration: none;
+}
+.f-info-links{
+    width:100%;
+}
+
+.f-info-socials, .f-info-brand{
+    width:100%;
+    margin-top: 0.5rem;
+}
+.f-info-socials i{
+    color: #222222;
+    margin: 0.2rem;
+    font-size: 1rem;
+}
+.f-info{
+    height: 8rem;
+    text-align: center;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.head{
+    margin-left: 3.6rem;
+    padding: 1rem;
+}
+
+.row {
+    margin: 0.5rem;
+    margin-right: 1rem;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.listing-card{
+    margin-bottom: 1.5rem;
+    padding: 0;
+    border: none;
+    background-color: none;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #222222;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity:0;
+}
+.card .card-img-overlay:hover{
+    opacity:0.4;
+    color: black;
+    font-weight: 500;
+    background-color: rgba(245, 233, 233, 0.265);
+    transition: all 0.3s ease-in-out;
+}
+.card-body:hover{
+    background-color:none;
+}
+
+
+/* new form */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+    width: 6rem;
+}
+
+/* Edit form */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+    width: 6rem;
+}
+
+/* show form */
+.show-img{
+    height: 50vh;
+}
+
+.btns{
+    display: flex;
+}
+.delt-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+    width: 6rem;
+}
+.cart{
+    padding: 0;
+    margin: 0;
+}

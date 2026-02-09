@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlust</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: white;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: white !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand i {
+            color: #fa2601b8;
+            font-size: 28px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 8px 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FF6347;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 90vh;
+            background-image:url("/images/image.png");   
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ebebeb;
+        }
+
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            
+        }
+
+        .btn-explore {
+            background: rgba(246, 222, 237, 0.904);
+            padding: 15px 40px;
+            font-size: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: transform 0.3s;
+            color: black;
+        }
+
+        .btn-explore:hover {
+            transform: translateY(-2px);
+            font-size: medium;
+            color: #FF6347;
+        }
+
+        /* Info Section */
+        .info-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .info-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #423b38d7;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border: 1.5px solid #b5b4b454;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(93, 92, 92, 0.162);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #685451;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Footer */
+
+        .f-info-links a{
+            text-decoration: none;
+            color: #222222;
+        }
+
+        .f-info-links a:hover{
+            color: #fe424fa1;
+            text-decoration: none;
+        }
+        .f-info-links{
+            width:100%;
+        }
+
+        .f-info-socials, .f-info-brand{
+            width:100%;
+            margin-top: 0.5rem;
+        }
+        .f-info-socials i{
+            color: #222222;
+            margin: 0.2rem;
+            font-size: 1rem;
+        }
+        .f-info{
+            height: 8rem;
+            text-align: center;
+            background-color: #ebebeb;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: space-evenly;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .info-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light border-bottom sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/listings">All Listings</a>
+                    <a class="nav-link" href="/listings/new">Add new listings</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <!-- For static HTML demo, showing sign up/login -->
+                    <a class="nav-link" href="/signup">SignUp</a>
+                    <a class="nav-link" href="/login">LogIn</a>
+                    <!-- When user is logged in, show: -->
+                </div>  
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Wanderlust</h1>
+        <p>Find your perfect place to stay. Anywhere, anytime.</p>
+        <a href="/listings" class="btn-explore">Explore Listings</a>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🏡</div>
+                <h3>Wide Selection</h3>
+                <p>Browse thousands of properties around the world. From cozy apartments to luxury villas.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Best Prices</h3>
+                <p>Get the best deals on accommodations. Compare prices and find your perfect match.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⭐</div>
+                <h3>Trusted Reviews</h3>
+                <p>Read real reviews from verified guests. Make informed decisions with confidence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mb-0">
+    <div class="f-info">
+        <div class="f-info-socials">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-linkedin"></i>
+            <i class="fa-brands fa-square-github"></i>
+        </div>
+        <div class="f-info-brand">&copy; Wanderlust Private Limited</div>
+        <div class="f-info-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

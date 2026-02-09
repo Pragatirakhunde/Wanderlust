@@ -1,0 +1,48 @@
+<% layout('layout/boilerplate') %>
+  <body>
+    <div class="row">
+      <div class="col-8">
+        <h3>Edit your Listing</h3>
+        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+          <div class="mb-3">
+            <lable for="title" class="form-lable">Title</lable>
+            <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">enter title</div>
+          </div>
+
+          <div class="mb-3">
+            <lable for="description" class="form-lable">Description</lable>
+            <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+            <div class="invalid-feedback">enter description here</div>
+          </div>
+
+          <div class="mb-3">
+            <lable for="image" class="form-lable">Image Link</lable>
+            <input name="listing[image]" value="<%= listing.image %>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">enter valid link</div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mt-3">
+              <lable for="price" class="form-lable">Price</lable>
+              <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required />
+              <div class="invalid-feedback">enter updated price</div>
+            </div>
+
+            <div class="col-md-8 mt-3">
+              <lable for="country" class="form-lable">Country</lable>
+              <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required />
+              <div class="invalid-feedback">enter country name</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <lable for="location" class="form-lable">Location</lable>
+            <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">enter correct location</div>
+          </div>
+          <button class="btn btn-dark mt-3 edit-btn">Edit</button>
+        </form>
+      </div>
+    </div>
+  </body>
