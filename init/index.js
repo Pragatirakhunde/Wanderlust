@@ -2,6 +2,7 @@ require("dotenv").config({ path: "../.env" });
 const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
+const User = require("../models/user.js");
 
 main()
   .then(() => {
@@ -18,8 +19,27 @@ async function main() {
 const initDB = async () => {
   console.log(process.env.MONGO_URI);
   await Listing.deleteMany({});
-  await Listing.insertMany(initData.data);
-  console.log("data was initialized");
+  await User.deleteMany({});
+  // Create Admin User
+    const admin = new User({
+        email: "admin@gmail.com",
+        username: "admin",
+    });
+
+    // passport-local-mongoose
+    const registeredAdmin = await User.register(admin, "admin123");
+
+    console.log("Admin Created");
+
+    // Assign owner to every listing
+    const listings = initData.data.map((obj) => ({
+        ...obj,
+        owner: registeredAdmin._id,
+    }));
+
+    await Listing.insertMany(listings);
+
+    console.log("Database Initialized");
 };
 
 initDB();
